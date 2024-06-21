@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colour picker</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+ES:wght@100..400&family=Playwrite+US+Trad:wght@100..400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <h1>The Colour Picker</h1>
+    </header>
+
+    <nav>
+        <input type="color" name="color" id="chosen-color" class="chosen-color" value="#85c1bd">
+        <select name="chosen-scheme" id="chosen-scheme" class="chosen-scheme">
+            <option value="monochrome">Monochrome</option>
+            <option value="monochrome-dark">Monochrome dark</option>
+            <option value="monochrome-light">Monochrome light</option>
+            <option value="analogic">Analogic</option>
+            <option value="complement">Complement</option>
+            <option value="analogic-complement">Analogic complement</option>
+            <option value="triad">Triad</option>
+            <option value="quad">Quad</option>
+        </select>
+        <button type="submit" id="get-scheme" class="get-scheme">Get color scheme</button>
+    </nav>
+
+    <div id="scheme-container" class="scheme-container">
+        <!-- here render scheme -->
+    </div>
+
+    <div class="message-container" id="message-container">
+        <p>Copied to clipboard</p>
+    </div>
+
+    <script src="index.js"> </script>
+</body>
+</html>

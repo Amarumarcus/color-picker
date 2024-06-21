@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Playwrite ES", sans-serif;
+    font-optical-sizing: auto;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.5fr 4fr;
+    grid-template-areas: 
+        "hh"
+        "nn"
+        "sc"
+    ;
+    background-color: aqua;
+    padding: 0.3rem;
+}
+
+/* header and navigation */
+
+header,
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    grid-area: hh;
+    font-size: 0.8em;
+}
+
+nav {
+    grid-area: nn;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+
+input:hover,
+button:hover,
+select:hover,
+.scheme-container div:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+/* input color style */
+input[type="color"] {
+	-webkit-appearance: none;
+	width: 3rem;
+	height: 2.2rem;
+    border-radius: 0.2rem;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+}
+
+/* select style */
+
+.chosen-scheme {
+    background-color: aqua;
+    padding: 0.5rem;
+    border: 1px solid black;
+    border-radius: 0.2rem;
+}
+
+/* button style */
+
+.get-scheme {
+    background-color: aqua;
+    padding: 0.5rem;
+    border: 1px solid black;
+    border-radius: 0.2rem;
+    min-width: 8rem;
+}
+
+/* main container with pallete and hex code */
+
+.scheme-container {
+    grid-area: sc;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 8fr 1fr;
+}
+
+.shreme-container div {
+    grid-row-start: 1;
+    height: 100%;
+}
+
+div {
+    grid-row-start: 1;
+}
+
+p {
+    font-size: 0.6em;
+    font-weight: bold;
+    text-align: center;
+    align-self: center;
+}
+
+/* copy message */
+
+.message-container {
+    position: absolute;
+    bottom: 5rem;
+    margin-left: auto;
+    left: 0;
+    right: 0rem;
+    width: 0;
+    font-size: 0;
+    background-color: aquamarine;
+    border-radius: 0.2rem;
+    transition: .3s ease;
+}
+
+.message-container.active {
+    width: 15rem;
+    font-size: 2rem;
+    padding: 0.5rem;
+}
+
+
+
+
